@@ -1,0 +1,28 @@
+{
+  "name": "rhodium-rewards",
+  "version": "1.0.0",
+  "description": "A rewards management application for tracking and redeeming reward points",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "build": "echo 'Build script placeholder'",
+    "test": "echo 'Test script placeholder'"
+  },
+  "keywords": [
+    "rewards",
+    "loyalty",
+    "points",
+    "redemption"
+  ],
+  "author": "Rhodium Smile Lab",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhodiumsmile-lab/Rhodiumrewards.git"
+  }
+}

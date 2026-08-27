@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGradient)"/>
+  
+  <!-- Title -->
+  <text x="600" y="120" font-size="64" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial, sans-serif">
+    Rhodium Rewards
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="200" font-size="32" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="Arial, sans-serif">
+    Earn More. Reward Better.
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="80" r="40" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="1050" cy="320" r="60" fill="rgba(255,255,255,0.15)"/>
+</svg>
