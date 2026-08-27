@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.unity3d.ads" >
+
+    <uses-sdk android:minSdkVersion="19" />
+
+    <queries>
+        <intent>
+            <action android:name="com.attribution.REFERRAL_PROVIDER" />
+        </intent>
+        <!--
+             App-store packages probed by AndroidStoreDataSource; must be declared
+             so PackageManager.getPackageInfo() can see them on Android 11+ (API 30+).
+             Keep in sync with AndroidKnownStore.
+        -->
+        <package android:name="com.android.vending" /> <!-- GOOGLE -->
+        <package android:name="com.google.market" /> <!-- GOOGLE_MARKET (legacy Android Market) -->
+        <package android:name="com.amazon.venezia" /> <!-- AMAZON -->
+        <package android:name="com.sec.android.app.samsungapps" /> <!-- SAMSUNG -->
+        <package android:name="com.xiaomi.market" /> <!-- XIAOMI -->
+        <package android:name="com.huawei.appmarket" /> <!-- HUAWEI -->
+        <package android:name="com.oppo.market" /> <!-- OPPO -->
+        <package android:name="com.bbk.appstore" /> <!-- VIVO -->
+    </queries>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_TOPICS" />
+    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+
+    <application>
+        <activity
+            android:name="com.unity3d.ads.adplayer.FullScreenWebViewDisplay"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen"
+            android:enableOnBackInvokedCallback="false"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:node="merge" >
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="com.unity3d.services.core.configuration.AdsSdkInitializer"
+                android:value="androidx.startup" />
+        </provider>
+    </application>
+
+</manifest>

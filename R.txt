@@ -1,0 +1,1 @@
+int style Theme_UnityAds_FullScreen_TransparentNav 0x0
