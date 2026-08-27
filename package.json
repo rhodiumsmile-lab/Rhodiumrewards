@@ -1,28 +1,31 @@
 {
-  "name": "rhodium-rewards",
+  "name": "rhodiumrewards",
   "version": "1.0.0",
-  "description": "A rewards management application for tracking and redeeming reward points",
-  "main": "index.js",
-  "type": "module",
+  "private": true,
+  "description": "Project metadata and helper scripts for the Rhodium Rewards Android app snapshot and brand assets.",
   "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js",
-    "build": "echo 'Build script placeholder'",
-    "test": "echo 'Test script placeholder'"
+    "start": "node -e \"console.log('Open Rhodium Rewards in Android Studio to run the Android app when the app module is available.')\"",
+    "build": "node -e \"console.log('Use ./gradlew build for Android builds after restoring the missing modules referenced in settings.gradle.kts.')\"",
+    "test": "node -e \"console.log('No automated test suite is checked in with this repository snapshot; validate assets and use ./gradlew test when modules are available.')\"",
+    "lint": "node -e \"console.log('Use ./gradlew lint for Android lint checks after restoring the expected Android modules.')\""
   },
   "keywords": [
+    "android",
     "rewards",
     "loyalty",
-    "points",
-    "redemption"
+    "branding"
   ],
   "author": "Rhodium Smile Lab",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rhodiumsmile-lab/Rhodiumrewards.git"
-  }
+    "url": "git+https://github.com/rhodiumsmile-lab/Rhodiumrewards.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rhodiumsmile-lab/Rhodiumrewards/issues"
+  },
+  "homepage": "https://github.com/rhodiumsmile-lab/Rhodiumrewards#readme"
 }
